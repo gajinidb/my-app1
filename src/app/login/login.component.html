@@ -1,12 +1,12 @@
 <div class="parent">
-    <form action="">
+    <form action="" [formGroup]="loginForm">
 
         <h2>loginform</h2>
 
-        <input type="text" placeholder="email or mobile number"><br>
-        <input type="password" placeholder="password" required max="100000" min="99999"><br>
+        <input type="text" placeholder="email or mobile number" formControlName="email"><br>
+        <input type="password" placeholder="password" required max="100000" min="99999" formControlName="password"><br>
         <h5>forgot password;?</h5>
-        <button routerLink="/dashboard">sign in</button>
+        <button (click)="login()">sign in</button>
         <h5>creat an acount;?</h5>
 
 
