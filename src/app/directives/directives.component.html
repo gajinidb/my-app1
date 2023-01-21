@@ -1,0 +1,80 @@
+<p>directives works!</p>
+
+<h1>hello...!</h1>
+<h1>how are you?</h1>
+<h1 *ngFor="let age of ages">{{age}}</h1>
+<ol *ngFor="let month of months"><li>{{month}}</li>
+</ol>
+<select name="" id="">
+    <option value="" *ngFor="let stat of states">{{stat}}</option>
+</select>
+<h2 *ngFor="let user of users">my name is {{user.name}} my age is {{user.age}}</h2>
+
+
+
+<table border="1px" >
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users">
+            <td [ngStyle]="{'color':user.age>30?'blue':'red'}">{{user.name}}</td>
+            <td [ngClass]="{'red':user.age>30,'green':user.age<=30}">{{user.age}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<table border="1px" style="color: blueviolet;">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>prize</th>
+            <th>quntity</th>
+            <th>rating</th>
+            <th>actiones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name}}</td>
+            <td>{{product.prize}}</td>
+            <td>{{product.quntity}}</td>
+            <td>{{product.rating}}</td>
+            <td>
+                <!-- <button (click)="delete()">delete</button> -->
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+
+<table class="table table-primary table-hover table-striped table-bordered">
+    <thead>
+        <tr>
+        <th>createdAt</th>
+        <th>account_name</th>
+        <th>available_balance</th>
+        <th>currency</th>
+        <th>user_image</th>
+        <th>account_number</th>
+        <th>id</th>
+        <!-- <th>createdAt</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td>{{account.createdAt}}</td>
+            <td>{{account.account_name}}</td>
+            <td>{{account.available_balance}}</td>
+            <td>{{account.currency}}</td>
+            <td>
+                <img src="{{account.user_image}}" alt="" width="100px" height="100px">
+            </td>
+            <td>{{account.account_number}}</td>
+            <td>{{account.id}}</td>
+        </tr>
+    </tbody>
+</table>

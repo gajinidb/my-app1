@@ -1,0 +1,24 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
+.child{
+    background-color: rgb(240, 146, 146);
+    width: 40%;
+    height: 60%;
+    margin-right: 180px;
+ 
+}
+input{
+    padding: 10px;
+    width: 70%;
+    margin-top: 60px;
+}
+button{
+    padding: 10px;
+    width: 25%;
+    margin-top: 40px;
+}

@@ -1,0 +1,37 @@
+<!-- <p>fee works!</p> -->
+
+<div class="parent">
+ <div class="child">
+
+    <h2>STUDENT fee</h2>
+
+
+       <label for="">StudentType :</label>
+        <input type="radio"name="schoofee" id="" [(ngModel)]="schoofee" value="residential show"> 
+        <label for="">residential show</label>
+        <input type="radio"name="schoofee" id="" [(ngModel)]="schoofee" value="dayScholor show"> 
+        <label for="">dayScholor show</label>
+        <input type="radio"name="schoofee" id="" [(ngModel)]="schoofee" value="open show">
+        <label for="">  open show</label>
+  
+
+    <div id="one" *ngIf="schoofee =='residential show'">
+        Tution Fee: 30,000 <br>
+        Bus Fee:10,000 <br>
+        Others:5,000 <br>
+        Total: 45,000</div>
+
+        <div id="two" *ngIf="schoofee =='dayScholor show'"> Tution Fee: 30,000 <br>
+            Hostel Fee:20,000 <br>
+           Others:5,000 <br>
+           Total: 55,000</div>
+
+           <div id="three" *ngIf="schoofee =='open show'">
+            Tution Fee: 5,000 <br>
+            Open Exam Fee:10,000 <br>
+            Others:0 <br>
+            Total: 15,000</div>
+
+     </div> 
+ 
+</div>

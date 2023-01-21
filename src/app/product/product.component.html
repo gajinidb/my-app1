@@ -1,0 +1,33 @@
+<!-- <p>product works!</p> -->
+<div class="total">
+ 
+<div class="parent" *ngFor="let product of products">
+    <!-- <h6>products</h6> -->
+    <div class="head">
+    <h1>{{product.id}}</h1>
+    <h4>{{product.category}}</h4>
+    <h2>{{product.title}}</h2>
+   <h5 id="rating">rating{{product.rating.rate}}</h5>
+    </div>
+
+   <div class="name">
+   <div> <p id="two"><img src="{{product.image}}" alt="" width="300px" height="400px"></p></div>
+
+   <div class="description">
+    <p id="one">{{product.description}}</p>
+    <!-- <button>order now</button> -->
+    </div>
+
+    <div id="virat">
+        <img src="https://static-assets-web.flixcart.com/fk-p-linchpin-web/fk-cp-zion/img/fa_62673a.png" alt="" width="70px"height="120px">
+    <p> PRICE;//${{product.rating.count}}</p>
+    <p> rating;/ {{product.price}}</p>
+    <button>order now</button>
+    <p class="discount">offer 40% //</p>
+    
+    </div>
+   </div>
+</div> 
+</div>  
+
+ 

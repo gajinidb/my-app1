@@ -1,0 +1,60 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(108, 232, 249);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    padding: 10px;
+    width: 60%;
+    margin: 10px;
+    background-color: rgb(198, 196, 196);
+
+}
+.child{
+    height: 60%;
+    width: 40%;
+    background-color:rgb(247, 247, 52);
+    border-radius: 20px;
+   
+}
+.clr1{
+    color: red;
+    font-size:40px;
+    text-transform: capitalize;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding-top: 30px;
+}
+.one{
+    width: 110px;
+    height: 50px;
+     background-color: rgb(77, 240, 221);
+     border-radius: 10px;
+    
+    }
+    .two{
+        width: 110px;
+        height: 50px;
+        background-color: rgb(77, 240, 221);
+        border-radius: 10px;
+  }
+  .three{
+    width: 110px;
+    height: 50px;
+    background-color: rgb(77, 240, 221);
+    border-radius: 10px;
+    }
+    .four{
+        width: 110px;
+        height: 50px;
+        background-color: rgb(77, 240, 221);
+        border-radius: 10px;
+     }
+     

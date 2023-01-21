@@ -1,0 +1,38 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(247, 247, 252);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+h2{
+    font-style: inherit;
+    text-transform: lowercase;
+    color: rgb(89, 89, 246);
+}
+form{
+    width: 40%;
+    height: 70%;
+    background: linear-gradient(rgb(143, 215, 239),rgb(233, 228, 231));
+    border-radius: 5px;
+}
+input{
+    width: 80%;
+    padding: 20px;
+   margin-top: 20px;
+   border-radius: 5px;
+}
+button{
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    background-color: rgb(90, 90, 237);
+    color: aliceblue;
+    border-radius: 5px;
+}
+h5{
+    color: rgb(89, 89, 243);
+}

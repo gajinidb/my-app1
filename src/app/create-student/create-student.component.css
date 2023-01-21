@@ -1,0 +1,20 @@
+label{
+    width: 200px;
+    font-size: 30px;
+    text-align: justify;
+    text-decoration: underline;
+}
+
+input{
+   border-radius: 20px;
+   border-color: 10px 5px 10px solid rgb(71, 165, 42);
+}
+
+button{
+
+    margin-left:15%;
+    width: 10%;
+    color: rgb(100, 239, 132);
+    background-color: rgb(68, 53, 223);
+    margin-top: 20px;
+}

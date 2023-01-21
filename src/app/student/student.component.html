@@ -1,0 +1,68 @@
+<p>student works!</p>
+<select [(ngModel)]="colunm">
+    <option>name</option>
+    <option>city</option>
+    <option>phone</option>
+    <option>address</option>
+    <option>salary</option>
+    <option>id</option>
+</select>
+<select [(ngModel)]="order">
+    <option>ase</option>
+    <option>desc</option>
+</select>
+<button (click)="sort()">sort</button>
+
+<input type="text" [(ngModel)]="term">
+<button (click)="filter()">search</button><br>
+<table border="2px" style="color: brown;" class="bg-primary text-white">
+    
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>city</th>
+            <th>phone</th>
+            <th>address</th>
+            <th>photo</th>
+            <th>placedin</th>
+            <th>salary</th>
+            <th>id</th>
+            <th>actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let student of students">
+            <td>{{student.name}}</td>
+            <td>{{student.city}}</td>
+            <td>{{student.phone}}</td>
+            <td>{{student.address}}</td>
+            <td><img src="{{student.photo}}" alt="" width="150px" height="100px"></td>
+            <td>{{student.placedIn}}</td>
+            <td>{{student.salary}}</td>
+            <td>{{student.id}}</td>
+            <td>
+                <button (click)="delete(student.id)" class="bg-danger">delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<select [(ngModel)]="limit" (change)="calctotalpages()">
+    <option>1</option>
+    <option>5</option>
+    <option>10</option>
+    <option>15</option>
+    <option>20</option>
+    <option>25</option>
+</select>
+
+<ul class="pagination">
+    <li *ngFor="let page1 of [].constructor(totalpages);let i = index"
+     class="page-item" (click)="page(i+1)"><a class="page-link">{{ i+1 }}</a></li>
+    <!-- <li class="page-item" (click)="page(2)"><a class="page-link">2</a></li>
+    <li class="page-item" (click)="page(3)"><a class="page-link">3</a></li>
+    <li class="page-item" (click)="page(4)"><a class="page-link">4</a></li>
+    <li class="page-item"(click)="page(5)"><a class="page-link">5</a></li>
+    <li class="page-item"(click)="page(6)"><a class="page-link">6</a></li> -->
+  </ul>
+

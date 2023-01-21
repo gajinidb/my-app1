@@ -1,0 +1,28 @@
+<p>create-vehicle works!</p>
+
+
+<form [formGroup]="vehicleForm">
+    <label>vehicle</label>
+    <input type="text" formControlName="vehicle"><br>
+
+    <label>manifacturer</label>
+    <input type="text"  formControlName="manifacturer"><br>
+
+    <label>model</label>
+    <input type="text"  formControlName="model"><br>
+
+    <label>type</label>
+    <input type="text"  formControlName="type"><br>
+
+    <label>fuel</label>
+    <input type="text"  formControlName="fuel"><br>
+
+    <label>color</label>
+    <input type="text"  formControlName="color"><br>
+
+    <label>image</label>
+    <input type="text"  formControlName="image"><br>
+
+<button (click)="submit()">submit</button>
+
+</form>

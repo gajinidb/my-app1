@@ -1,0 +1,38 @@
+
+
+<div class="head">
+
+    <!-- <p>rectangle works!</p> -->
+<div class="rectangle">
+
+<h1>rectangle</h1>
+<label for="">lenth</label>
+<input type="number" [(ngModel)]="length" type="text">
+<br>
+<label for="">base</label>
+<input type="number" [(ngModel)]="berth"type="text">
+<br>
+
+<button (click)="area()">area</button>
+<button (click)="perimeter()">perimeter</button><br>
+<p>result is {{result}} </p>
+</div>
+</div>
+
+<!-- 
+public number1:number = 0;
+public number2:number = 0;
+public result:number = 0;
+
+add(){
+  this.result = this.number1 + this.number2;
+}
+sub(){
+  this.result = this.number1 - this.number2;
+}
+mul(){
+  this.result = this.number1 * this.number2;
+}
+div(){
+  this.result = this.number1 / this.number2;
+} -->

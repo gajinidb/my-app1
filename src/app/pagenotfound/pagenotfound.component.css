@@ -1,0 +1,12 @@
+.parent{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(75, 165, 42);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+h1{
+    color: cornsilk;
+}

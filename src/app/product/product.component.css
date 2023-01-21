@@ -1,0 +1,99 @@
+
+.totle{
+    width: 100vw;
+    height: 100vh;
+    margin: 0px;
+}
+.parent{
+    width: 90%;
+    height: 60%;
+    background-color: rgb(251, 247, 247);
+}
+.child1{
+    color: rgb(244, 243, 247);
+    width: 100%;
+}
+h1{
+    color: rgb(49, 49, 175);
+}
+h2{
+    color: rgb(66, 66, 246);
+}
+h4{
+    color: rgb(243, 91, 108);
+}
+/* h5{
+    color: rgb(241, 241, 248);
+    background-color: green;
+
+} */
+#rating{
+    width: 100PX;
+    margin-left: 450PX;
+    background-color: green;
+    color: aliceblue;
+}
+#rating:hover{
+    background-color: rgb(221, 69, 119);
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+
+}
+#virat{
+  
+   margin-top: 80px;
+   margin-left: 30px;
+   color: rgb(119, 235, 99);
+  
+
+
+}
+button{
+
+  background-color: rgb(240, 190, 27);
+  border-radius: 10%;
+}
+button:hover{
+    background-color: rgb(239, 136, 136);
+}
+img{
+    padding-bottom: 40px;
+}
+#two:hover{
+background-color: rgb(245, 125, 223);
+}
+
+
+.description{
+    padding-top: 50px;
+    width: 50%;
+    text-transform: capitalize;
+    font-style: italic;
+    text-align: center;
+    text-transform: none;
+}
+.description:hover{
+    background-color: rgb(195, 83, 55);
+
+    height: 300px; 
+}
+.head{
+    padding-top: 10px;
+    margin-left: 80px;
+}
+#one{
+    width: 70%;
+    text-align: justify;
+    margin-left: 20px;
+}
+.discount{
+   position: relative;
+   left: -810%;
+   bottom: -55px; 
+   color: rgb(241, 243, 245);
+}
+

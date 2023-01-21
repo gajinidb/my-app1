@@ -1,0 +1,25 @@
+
+.head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+.rectangle{
+    width: 50%;
+    height: 40%;
+    background-color: rgb(209, 184, 233);
+   
+}
+
+button{
+    width: 20%;
+    padding: 10px;
+  margin: 10px;
+  
+}
+input{
+    width: 30%;
+    padding: 10px;
+    margin: 10px;
+}

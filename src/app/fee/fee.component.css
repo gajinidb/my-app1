@@ -1,0 +1,37 @@
+.parent{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    font-style: italic;
+    text-transform: capitalize;
+}
+ .child{
+     height: 60%;
+    width: 50%;
+    background-color: rgb(106, 237, 63); 
+    
+} 
+
+label{
+    margin: 10px;
+}
+#one{
+    border: 5px solid green;
+    background-color: rgb(216, 50, 228);
+    color: cornsilk;
+}
+
+#two{
+    border: 5px solid rgb(230, 120, 61);
+    background-color: rgb(78, 92, 214);
+    color: cornsilk;
+}
+#three{
+    border: 5px solid rgb(174, 52, 156);
+    background-color: rgb(250, 44, 68);
+    color: cornsilk;
+}
