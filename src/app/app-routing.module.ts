@@ -1,6 +1,7 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdvancecalculatorComponent } from './advancecalculator/advancecalculator.component';
+import { AuthenticationGuard } from './authentication.guard';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CarsComponent } from './cars/cars.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
@@ -24,7 +25,7 @@ import { WishingComponent } from './wishing/wishing.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
-  {path:'dashboard',component:DashboardComponent,children:[
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard], children:[
     {path:'home',component:HomeComponent},
     {path:'calculator',component:CalculatorComponent},
     {path:'data-binding',component:DataBindingComponent},
