@@ -25,6 +25,9 @@ import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { MailBoxComponent } from './mail-box/mail-box.component';
+import { PhotosComponent } from './photos/photos.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 
 @NgModule({
@@ -51,6 +54,9 @@ import { CreateStudentComponent } from './create-student/create-student.componen
     StudentComponent,
     CreateVehicleComponent,
     CreateStudentComponent,
+    MailBoxComponent,
+    PhotosComponent,
+    VehicleDetailsComponent,
     
   ],
   imports: [

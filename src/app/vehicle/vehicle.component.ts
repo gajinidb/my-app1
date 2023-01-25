@@ -1,5 +1,6 @@
 import { animate } from '@angular/animations';
 import { Component } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { Subscriber } from 'rxjs';
 import { VehicleService } from '../vehicle.service';
 
@@ -16,7 +17,7 @@ export class VehicleComponent {
   public vehicles:any= [];
   public limit:number=0;
 
-  constructor(private _vechileService:VehicleService){
+  constructor(private _vechileService:VehicleService,private _router:Router){
     _vechileService.getvehicle().subscribe(
       (data:any)=>{
         this.vehicles=data;
@@ -71,6 +72,12 @@ export class VehicleComponent {
         ("internal server error")
       }
     )
+  }
+
+  view(id:any){
+    this._router.navigateByUrl("/dashboard/vehicle-details/"+id);
+
+
   }
   
 

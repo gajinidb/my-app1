@@ -1,0 +1,21 @@
+<p>photos works!</p>
+
+<div class="parent" *ngFor="let photo of photos">
+
+    <h3>{{photo.success}}</h3>
+    <h3>[{{photo.meme}}</h3>
+    <h3>{{photo.url}}]</h3>
+    <!-- <h3>{{photo.success}}</h3>
+    <h3>{{photo.success}}</h3>
+    <h3>{{photo.success}}</h3> -->
+</div>
+
+<label for="">honda</label>
+<input type="radio" name="brands" id="" [(ngModel)]="photos" value="honda"><br>
+
+<label for="">kia</label>
+<input type="radio" name="brands" id="" [(ngModel)]="photos" value="kia"><br>
+
+<img *ngIf="photos =='honda'" src="/https://i.imgflip.com/30b1gx.jpg" alt="">
+
+<img *ngIf="photos =='honda'" src="/https://i.imgflip.com/1ur9b0.jpg" alt="">

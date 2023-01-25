@@ -13,13 +13,16 @@ import { FeeComponent } from './fee/fee.component';
 import { GradeComponent } from './grade/grade.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { MailBoxComponent } from './mail-box/mail-box.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PhonesComponent } from './phones/phones.component';
+import { PhotosComponent } from './photos/photos.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ProductComponent } from './product/product.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { SquereComponent } from './squere/squere.component';
 import { StudentComponent } from './student/student.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { WishingComponent } from './wishing/wishing.component';
 
@@ -43,10 +46,14 @@ const routes: Routes = [
     {path:'product',component:ProductComponent},
     {path:'student',component:StudentComponent},
     {path:'create-vehicle',component:CreateVehicleComponent},
-    {path:'create-student',component:CreateStudentComponent}
+    {path:'create-student',component:CreateStudentComponent},
+    {path:'mail-box',component:MailBoxComponent},
+    {path:'photos',component:PhotosComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
   ]},
   {path:'',component:LoginComponent},
   {path:'**',component:PagenotfoundComponent},
+
   
 ];
 
