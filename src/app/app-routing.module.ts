@@ -62,7 +62,12 @@ const routes: Routes = [
     {path:'flipcart',component:FlipcartComponent},
     {path:'cartt',component:CarttComponent},
     {path:'navbar',component:NavbarComponent},
-    {path:'about-company',component:AboutCompanyComponent}
+    {path:'about-company',component:AboutCompanyComponent},
+
+    {
+      path: 'items',
+      loadChildren: () => import('./contact-us/contact-us.module').then(m => m.ContactUsModule)
+    }
   ]},
   {path:'',component:LoginComponent},
   {path:'**',component:PagenotfoundComponent},
