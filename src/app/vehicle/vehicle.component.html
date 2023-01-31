@@ -1,6 +1,4 @@
 
-
-<table border="2px">
 <input type="text" [(ngModel)]="term">
 <button (click)="filter()">search</button>
 
@@ -13,6 +11,8 @@
     <option>image </option>
     <option>id</option>
 </select>
+
+
 <select [(ngModel)]="order">
     <option>asc </option>
     <option>desc</option>
@@ -20,7 +20,7 @@
 <button (click)="sort()">sort</button>
 
 
-
+<table border="2px">
     <thead>
         <tr>
             <th>Vehicle</th>
@@ -34,8 +34,8 @@
             <th>actions</th>
         </tr>
     </thead>
-    <tbody>
-    <tr *ngFor="let vehicle of vehicles">
+      <tbody>
+          <tr *ngFor="let vehicle of vehicles">
             <td>{{vehicle.Vehicle}}</td>
             <td>{{vehicle.manufacturer}}</td>
             <td>{{vehicle.model}}</td>
@@ -49,6 +49,7 @@
             <td>
                 <button (click)="delete(vehicle.id)" class="btn btn-danger">delete</button>
                 <button (click)="view(vehicle.id)" class="btn btn-danger">view</button>
+                <button (click)="edit(vehicle.id)" class="btn btn-danger">edit</button>
             </td>
         </tr>
     </tbody>
@@ -60,7 +61,7 @@
     <option>5</option>
     <option>10</option>
     <option>20</option>
-</select>
+                     </select>
 
 
 <ul class="pagination">

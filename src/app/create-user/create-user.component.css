@@ -1,0 +1,29 @@
+label{
+    width: 200px;
+
+}
+
+input{
+    width: 30%;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+    
+}
+
+button{
+    width: 20%;
+    padding: 10px;
+    margin-left: 18%;
+    margin-top: 5%;
+    background-color: rgb(109, 109, 244);
+    color: aliceblue;
+}
+
+select{
+    width: 30%;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 15px;
+}
+

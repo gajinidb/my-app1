@@ -1,12 +1,14 @@
-<p>create-vehicle works!</p>
+<p>{{isedit? 'edite vehicle form':'create vehicle form'}}</p>
+<!-- <h2 *!ngIf="create">create</h2>
+<h2 *ngIf="edit">edit</h2> -->
 
 
 <form [formGroup]="vehicleForm">
-    <label>vehicle</label>
-    <input type="text" formControlName="vehicle"><br>
+    <label>Vehicle</label>
+    <input type="text" formControlName="Vehicle"><br>
 
-    <label>manifacturer</label>
-    <input type="text"  formControlName="manifacturer"><br>
+    <label>manufacturer</label>
+    <input type="text"  formControlName="manufacturer"><br>
 
     <label>model</label>
     <input type="text"  formControlName="model"><br>

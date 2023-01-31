@@ -10,10 +10,14 @@ export class VehicleService {
   constructor(private _httpClint:HttpClient){
   }
 
-  getvehicle():Observable<any>{
+  getvehicles():Observable<any>{
     return this._httpClint.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction");
-
   }
+   getvehicle(id:any):Observable<any>{
+      return this._httpClint.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id)
+    }
+    
+  
   getFilteredvehicles(term:any):Observable<any>{
     return this._httpClint.get("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction?filter="+term);
   }
@@ -31,6 +35,11 @@ export class VehicleService {
 
   createVehicle(data:any):Observable<any>{
     return this._httpClint.post("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction",data);
+  }
+
+
+  updateVehicle(data:any,id:any):Observable<any>{
+    return this._httpClint.put("https://6128991386a213001729f9df.mockapi.io/test/v1/jurisdiction/"+id,data);
   }
 
 

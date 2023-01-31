@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { VehicleService } from '../vehicle.service';
 
 @Component({
@@ -12,8 +13,8 @@ export class CreateVehicleComponent {
 
   public vehicleForm:FormGroup = new FormGroup(
     {
-      vehicle: new FormControl(),
-      manifacturer: new FormControl(),
+      Vehicle: new FormControl(),
+      manufacturer: new FormControl(),
       model: new FormControl(),
       type: new FormControl(),
       fuel: new FormControl(), 
@@ -21,23 +22,59 @@ export class CreateVehicleComponent {
     image: new FormControl()
     }
   )
+public isedit:boolean=false;
+public id:any="";
 
-  constructor(private _vehicleService:VehicleService){
+
+  constructor(private _vehicleService:VehicleService,private _activatedRoute:ActivatedRoute){
+    this._activatedRoute.params.subscribe(
+      (data:any)=>{
+
+        if(data.id){
+          this.isedit= true;
+          this.id=data.id;
+          alert(data.id);
+          _vehicleService.getvehicle(data.id).subscribe(
+            (data:any)=>{
+              this.vehicleForm.patchValue(data);
+            }
+          )
+
+
+        }
+        // alert(data.id);
+        // _vehicleService.getvehicle(data.id).subscribe(
+        //   (data:any)=>{
+        //     this.vehicleForm.patchValue(data);
+        //   }
+        // )
+         
+      }
+    )
 
   }
 
   submit(){
-    console.log(this.vehicleForm.value);
-  this._vehicleService.createVehicle(this.vehicleForm.value).subscribe(
-    (data:any)=>{
-      alert("created success fully");
-    },
-    (err:any)=>{
-      alert("internal server error")
+    if(this.isedit){
+      // console.log(this.vehicleForm.value);
+      this._vehicleService.updateVehicle(this.vehicleForm.value,this.id).subscribe(
+        (data:any)=>{
+          alert("updated success fully");
+        },
+        (err:any)=>{
+          alert("internal server error")
+        }
+      )
     }
-  )
+    else{
+      this._vehicleService.updateVehicle(this.vehicleForm.value,this.id).subscribe(
+        (data:any)=>{
+          alert("created success fully");
+        },
+        (err:any)=>{
+          alert("internal server error")
+        }
+      )
+    }
   }
-
-
-
 }

@@ -4,17 +4,22 @@ import { AdvancecalculatorComponent } from './advancecalculator/advancecalculato
 import { AuthenticationGuard } from './authentication.guard';
 import { CalculatorComponent } from './calculator/calculator.component';
 import { CarsComponent } from './cars/cars.component';
+import { CarttComponent } from './cartt/cartt.component';
 import { CreateStudentComponent } from './create-student/create-student.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { DataBindingComponent } from './data-binding/data-binding.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { FeeComponent } from './fee/fee.component';
+import { FlipcartComponent } from './flipcart/flipcart.component';
 import { GradeComponent } from './grade/grade.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { MailBoxComponent } from './mail-box/mail-box.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { ParentComponent } from './parent/parent.component';
 import { PhonesComponent } from './phones/phones.component';
 import { PhotosComponent } from './photos/photos.component';
 import { PipesComponent } from './pipes/pipes.component';
@@ -49,7 +54,13 @@ const routes: Routes = [
     {path:'create-student',component:CreateStudentComponent},
     {path:'mail-box',component:MailBoxComponent},
     {path:'photos',component:PhotosComponent},
-    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreateVehicleComponent},
+    {path:'create-user',component:CreateUserComponent},
+    {path:'parent',component:ParentComponent},
+    {path:'flipcart',component:FlipcartComponent},
+    {path:'cartt',component:CarttComponent},
+    {path:'navbar',component:NavbarComponent}
   ]},
   {path:'',component:LoginComponent},
   {path:'**',component:PagenotfoundComponent},

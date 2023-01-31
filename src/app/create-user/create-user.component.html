@@ -1,0 +1,120 @@
+<p>create-user works!</p>
+
+<form [formGroup]="userForm">
+
+<label for="">name:</label>
+<input type="text" formControlName="name">
+
+
+<div class="text-danger" *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+
+    <p *ngIf="userForm.get('name')?.errors?.['required']">name is requird</p>
+
+    <p *ngIf="userForm.get('name')?.errors?.['minlength']">name should contain atleast 3 characters.</p>
+</div>
+<br>
+
+
+
+<label for="">age:</label>
+<input type="number" formControlName="age"><br>
+
+<div class="text-danger" *ngIf="userForm.get('age')?.touched && userForm.get('age')?.invalid">
+
+    <p *ngIf="userForm.get('age')?.errors?.['required']">age is requird</p>
+
+    <p *ngIf="userForm.get('age')?.errors?.['min']">age atleast 0 years.</p>
+
+    <p *ngIf="userForm.get('age')?.errors?.['max']">age almost 100 years.</p>
+</div>
+
+<label for="">phone:</label>
+<input type="number" formControlName="phone"><br>
+
+
+
+<div formGroupName="address">
+
+<label for="">state:</label>
+ <!-- <input type="number" formControlName="state"><br> -->
+ <select formControlName="state">
+    <option value="ts"> telangana</option>
+    <option value="ap">andra pradesh</option>
+</select>
+<br>
+
+
+<label for="">pin:</label>
+
+<input type="number" formControlName="pin">
+<div class="text-danger" *ngIf="userForm.get('address')?.get('pin')?.touched && userForm.get('address')?.get('pin')?.invalid">
+
+    <p *ngIf="userForm.get('address')?.get('pin')?.errors?.['required']">pin is requird</p>
+
+    <p *ngIf="userForm.get('address')?.get('pin')?.errors?.['min']">pin atleast 6 years.</p>
+
+    <p *ngIf="userForm.get('address')?.get('pin')?.errors?.['max']">pin almost 6 years.</p>
+</div>
+<br> 
+</div>
+
+<h4>type</h4>
+<input type="radio" name="type" formControlName="type" value="dayscholor">
+<label for="">day scholor</label><br>
+
+<input type="radio"  name="type" formControlName="type" value="residential">
+<label for="">residential</label><br>
+
+
+<div *ngIf="userForm.get('type')?.value=='dayscholor'">
+<label for="">bus fee:</label>
+<input type="number" formControlName="busfee"><br>
+</div>
+
+<div *ngIf="userForm.get('type')?.value=='residential'">
+<label for="">hostel fee:</label>
+<input type="number"formControlName="hostelfee"><br>
+</div>
+
+<h1>cards</h1>
+<button (click)="add()">add</button>
+
+<br>
+<br>
+
+<div formArrayName="cards">
+    <div *ngFor="let card of cardsFormarray.controls;let i = index">
+        <div formGroupName="{{i}}">
+
+            <label>card no:</label>
+            <input type="number" formControlName="cardNo">
+            <br>
+
+            <label>expiry:</label>
+            <input type="month" formControlName="expiry">
+            <br>
+
+            <label>cvv:</label>
+            <input type="number" formControlName="cvv">
+
+            <div class="text-danger" *ngIf="cardsFormarray.controls[i]?.get('cvv')?.touched && cardsFormarray.controls[i]?.get('cvv')?.invalid">
+
+                <p *ngIf="cardsFormarray.controls[i]?.get('cvv')?.errors?.['required']">cvv number is requird</p>
+            
+                <p *ngIf="cardsFormarray.controls[i]?.get('cvv')?.errors?.['min']">cvv atleast 100 years.</p>
+            
+                <p *ngIf="cardsFormarray.controls[i]?.get('cvv')?.errors?.['max']">cvv almost 100 years.</p>
+            </div>
+            <br>
+
+            <button (click)="delete(i)" class="btn btn-warning">delete</button>
+            <hr>
+
+        </div>
+    </div>
+</div>
+
+</form>
+<button (click)="submit()" class="btn-danger">submit</button>
+
+

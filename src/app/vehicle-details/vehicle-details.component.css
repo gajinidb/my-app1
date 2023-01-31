@@ -1,0 +1,13 @@
+h1{
+    display: flex;
+    gap: 40px;
+}
+h4{
+    gap: 40px;
+    display: flex;
+}
+p{
+    width: 40px;
+    gap: 50px;
+    margin-left: 30%;
+}

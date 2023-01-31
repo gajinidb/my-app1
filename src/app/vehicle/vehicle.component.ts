@@ -18,7 +18,7 @@ export class VehicleComponent {
   public limit:number=0;
 
   constructor(private _vechileService:VehicleService,private _router:Router){
-    _vechileService.getvehicle().subscribe(
+    _vechileService.getvehicles().subscribe(
       (data:any)=>{
         this.vehicles=data;
       },
@@ -78,6 +78,10 @@ export class VehicleComponent {
     this._router.navigateByUrl("/dashboard/vehicle-details/"+id);
 
 
+  }
+
+  edit(id:any){
+    this._router.navigateByUrl("/dashboard/edit-vehicle/"+id);
   }
   
 

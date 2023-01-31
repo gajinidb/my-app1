@@ -28,6 +28,13 @@ import { CreateStudentComponent } from './create-student/create-student.componen
 import { MailBoxComponent } from './mail-box/mail-box.component';
 import { PhotosComponent } from './photos/photos.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { FlipcartComponent } from './flipcart/flipcart.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CarttComponent } from './cartt/cartt.component';
+import { RatingComponent } from './rating/rating.component';
 
 
 @NgModule({
@@ -57,6 +64,13 @@ import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.compo
     MailBoxComponent,
     PhotosComponent,
     VehicleDetailsComponent,
+    CreateUserComponent,
+    ParentComponent,
+    ChildComponent,
+    FlipcartComponent,
+    NavbarComponent,
+    CarttComponent,
+    RatingComponent,
     
   ],
   imports: [
