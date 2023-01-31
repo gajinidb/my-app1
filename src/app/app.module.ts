@@ -35,6 +35,7 @@ import { FlipcartComponent } from './flipcart/flipcart.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CarttComponent } from './cartt/cartt.component';
 import { RatingComponent } from './rating/rating.component';
+import { AboutUsModule } from './about-us/about-us.module';
 
 
 @NgModule({
@@ -78,7 +79,8 @@ import { RatingComponent } from './rating/rating.component';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AboutUsModule
     
   ],
   providers: [],

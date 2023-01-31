@@ -1,5 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutCompanyComponent } from './about-us/about-company/about-company.component';
 import { AdvancecalculatorComponent } from './advancecalculator/advancecalculator.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { CalculatorComponent } from './calculator/calculator.component';
@@ -60,7 +61,8 @@ const routes: Routes = [
     {path:'parent',component:ParentComponent},
     {path:'flipcart',component:FlipcartComponent},
     {path:'cartt',component:CarttComponent},
-    {path:'navbar',component:NavbarComponent}
+    {path:'navbar',component:NavbarComponent},
+    {path:'about-company',component:AboutCompanyComponent}
   ]},
   {path:'',component:LoginComponent},
   {path:'**',component:PagenotfoundComponent},
