@@ -36,6 +36,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CarttComponent } from './cartt/cartt.component';
 import { RatingComponent } from './rating/rating.component';
 import { AboutUsModule } from './about-us/about-us.module';
+import { PricePipe } from './price.pipe';
+import { ImpDirective } from './imp.directive';
 
 
 @NgModule({
@@ -72,6 +74,8 @@ import { AboutUsModule } from './about-us/about-us.module';
     NavbarComponent,
     CarttComponent,
     RatingComponent,
+    PricePipe,
+    ImpDirective,
     
   ],
   imports: [

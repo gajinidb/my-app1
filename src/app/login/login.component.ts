@@ -19,7 +19,6 @@ export class LoginComponent {
   )
 
   constructor(private _loginService:LoginService,private _router:Router){}
-
   login(){
     console.log(this.loginForm.value);
     this._loginService.login(this.loginForm.value).subscribe(

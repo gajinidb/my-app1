@@ -15,8 +15,9 @@
 
 <input type="text" [(ngModel)]="term">
 <button (click)="filter()">search</button><br>
+
+
 <table border="2px" style="color: brown;" class="bg-primary text-white">
-    
     <thead>
         <tr>
             <th>name</th>
@@ -36,9 +37,11 @@
             <td>{{student.city}}</td>
             <td>{{student.phone}}</td>
             <td>{{student.address}}</td>
-            <td><img src="{{student.photo}}" alt="" width="150px" height="100px"></td>
+            <td>
+                <img src="{{student.photo}}" alt="" width="150px" height="100px">
+            </td>
             <td>{{student.placedIn}}</td>
-            <td>{{student.salary}}</td>
+            <td>{{student.salary | price}}</td>
             <td>{{student.id}}</td>
             <td>
                 <button (click)="delete(student.id)" class="bg-danger">delete</button>

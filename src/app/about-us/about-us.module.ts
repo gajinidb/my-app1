@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CeoComponent } from './ceo/ceo.component';
 import { AboutCompanyComponent } from './about-company/about-company.component';
+import { PricePipe } from './price.pipe';
 
 
 
@@ -9,6 +10,7 @@ import { AboutCompanyComponent } from './about-company/about-company.component';
   declarations: [
     CeoComponent,
     AboutCompanyComponent,
+    PricePipe,
 
   ],
   imports: [
