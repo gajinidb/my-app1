@@ -1,0 +1,23 @@
+<p>jobs works!</p>
+
+<table border="1px">
+
+    <thead>
+        <tr>
+            <th>companyname</th>
+            <th>package</th>
+            <th>location</th>
+            <th>vacancy</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let job of jobs">
+            <td>{{job.companyName}}</td>
+            <td>{{job.package}}</td>
+            <td>{{job.location}}</td>
+            <td>{{job.vecancy}}</td>
+        </tr>
+    </tbody>
+
+</table>

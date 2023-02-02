@@ -28,8 +28,17 @@
     <p *ngIf="userForm.get('age')?.errors?.['max']">age almost 100 years.</p>
 </div>
 
+<label for="">email:</label>
+<input type="email" formControlName="email">
+<div class="text-danger" *ngIf="userForm.get('email')?.touched && userForm.get('email')?.invalid">
+    <p *ngIf="userForm.get('email')?.errors?.['required']">email is requird</p>
+    <p *ngIf="userForm.get('email')?.errors?.['domainerror']">use @ capgemini.com only</p>
+
+</div>
+<br>
+
 <label for="">phone:</label>
-<input type="number" formControlName="phone"><br>
+<input type="email" formControlName="phone"><br>
 
 
 

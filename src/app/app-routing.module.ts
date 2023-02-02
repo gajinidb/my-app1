@@ -16,6 +16,7 @@ import { FeeComponent } from './fee/fee.component';
 import { FlipcartComponent } from './flipcart/flipcart.component';
 import { GradeComponent } from './grade/grade.component';
 import { HomeComponent } from './home/home.component';
+import { JobsComponent } from './jobs/jobs.component';
 import { LoginComponent } from './login/login.component';
 import { MailBoxComponent } from './mail-box/mail-box.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -63,6 +64,7 @@ const routes: Routes = [
     {path:'cartt',component:CarttComponent},
     {path:'navbar',component:NavbarComponent},
     {path:'about-company',component:AboutCompanyComponent},
+    {path:'jobs',component:JobsComponent},
 
     {
       path: 'items',

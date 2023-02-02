@@ -20,7 +20,7 @@ import { FeeComponent } from './fee/fee.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { PhonesComponent } from './phones/phones.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ProductComponent } from './product/product.component';
 import { StudentComponent } from './student/student.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
@@ -38,6 +38,8 @@ import { RatingComponent } from './rating/rating.component';
 import { AboutUsModule } from './about-us/about-us.module';
 import { PricePipe } from './price.pipe';
 import { ImpDirective } from './imp.directive';
+import { JobsComponent } from './jobs/jobs.component';
+import { TokenInterceptor } from './token.interceptor';
 
 
 @NgModule({
@@ -76,6 +78,7 @@ import { ImpDirective } from './imp.directive';
     RatingComponent,
     PricePipe,
     ImpDirective,
+    JobsComponent,
     
   ],
   imports: [
@@ -87,7 +90,13 @@ import { ImpDirective } from './imp.directive';
     AboutUsModule
     
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

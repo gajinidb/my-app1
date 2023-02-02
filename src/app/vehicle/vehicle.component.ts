@@ -2,6 +2,7 @@ import { animate } from '@angular/animations';
 import { Component } from '@angular/core';
 import { Route, Router } from '@angular/router';
 import { Subscriber } from 'rxjs';
+import { Vehicle } from '../vehicle';
 import { VehicleService } from '../vehicle.service';
 
 @Component({
@@ -14,12 +15,13 @@ export class VehicleComponent {
   public colunm:string="";
   public order:string="";
   public term:string = "";
-  public vehicles:any= [];
+  public vehicles:Vehicle[]= [];
   public limit:number=0;
 
   constructor(private _vechileService:VehicleService,private _router:Router){
     _vechileService.getvehicles().subscribe(
-      (data:any)=>{
+      //(data:vehicle[])=>{}
+      (data:Vehicle[])=>{
         this.vehicles=data;
       },
       (err:any)=>{

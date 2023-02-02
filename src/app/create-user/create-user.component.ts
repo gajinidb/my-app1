@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup, FormArray, Validators } from '@angular/forms';
+import { FormControl, FormGroup, FormArray, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 
 @Component({
   selector: 'app-create-user',
@@ -12,6 +12,7 @@ public userForm:FormGroup=new FormGroup(
   {
     name:new FormControl("",[Validators.required,Validators.minLength(3)]),
     age:new FormControl("",[Validators.required,Validators.min(0),Validators.max(100)]),
+    email:new FormControl("",[Validators.required,domainValidator]),
     phone:new FormControl(),
    address:new FormGroup({
       state:new FormControl(),
@@ -46,5 +47,13 @@ public userForm:FormGroup=new FormGroup(
   submit(){
     console.log(this.userForm.value)
 
+  }
+}
+function domainValidator(control: AbstractControl): ValidationErrors | null{
+  if(control.value.indexOf('@capgemini.com')== -1){
+    return {'domainerror':'use capgemini.com at the end'}
+  }else{
+
+  return null
   }
 }

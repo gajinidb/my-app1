@@ -39,16 +39,7 @@ public id:any="";
               this.vehicleForm.patchValue(data);
             }
           )
-
-
-        }
-        // alert(data.id);
-        // _vehicleService.getvehicle(data.id).subscribe(
-        //   (data:any)=>{
-        //     this.vehicleForm.patchValue(data);
-        //   }
-        // )
-         
+        } 
       }
     )
 
